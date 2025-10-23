@@ -6,6 +6,7 @@ export const FEATURES = {
   // Individual page coming soon flags (for granular control)
   MARKETS_COMING_SOON: true,
   PREDICTIONS_COMING_SOON: true,
+  DOCS_COMING_SOON: true,
   
   // Other feature flags can be added here
   ENABLE_WALLET_CONNECTION: true,
@@ -13,11 +14,12 @@ export const FEATURES = {
 } as const
 
 // Helper function to check if coming soon overlay should be shown
-export const shouldShowComingSoon = (page: 'markets' | 'predictions'): boolean => {
+export const shouldShowComingSoon = (page: 'markets' | 'predictions' | 'docs'): boolean => {
   if (!FEATURES.SHOW_COMING_SOON_OVERLAY) return false
   
   if (page === 'markets') return FEATURES.MARKETS_COMING_SOON
   if (page === 'predictions') return FEATURES.PREDICTIONS_COMING_SOON
+  if (page === 'docs') return FEATURES.DOCS_COMING_SOON
   
   return false
 }

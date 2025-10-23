@@ -440,7 +440,8 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     variant="outline"
-                     className="border-neutral-600 text-neutral-300 hover:bg-neutral-800 bg-transparent px-6 py-3 transition-all duration-300 hover:scale-105"
+                    onClick={() => window.location.href = '/docs'}
+                    className="border-neutral-600 text-neutral-300 hover:bg-neutral-800 bg-transparent px-6 py-3 transition-all duration-300 hover:scale-105"
                   >
                      {t('home.docs')}
                   </Button>
