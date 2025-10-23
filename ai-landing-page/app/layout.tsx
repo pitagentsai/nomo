@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'NOMO - BNB Prediction Marketplace',
   description: 'The next-generation BNB prediction marketplace. Trade on the future.',
   generator: 'NOMO',
+  // Trigger redeploy
 }
 
 export default function RootLayout({
